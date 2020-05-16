@@ -14,16 +14,18 @@ public class CRUDOperations {
 		return list;
 	}
 	
-	public List<Blog> viewBlog(Blog blog) throws IOException{
-		return null;
-		
+	public List<Blog> viewBlog() throws IOException{
+		System.out.println("SORTED BLOG BASED ON BLOG TITLE");
+         list.sort((b1,b2)->b1.getBlogTitle().compareTo(b2.getBlogTitle()));		
+	    list.stream().forEach(p->p.getBlogTitle());
+		return list;	
 	}
-	public List<Blog> updateBlog(Blog blog) throws IOException{
-		return null;
 	
+	public List<Blog> updateBlog(Blog blog) throws IOException{
+		return null;	
 	}
+	
 	public List<Blog> deleteBlog(Blog blog) throws IOException{
 		return null;
-		
 	}
 }
